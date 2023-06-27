@@ -32,7 +32,7 @@ const registerUser = AsyncHandler(async (req, res) => {
         id: registerdUser._id,
         name: registerdUser.name,
         email: registerdUser.email,
-        password: registerdUser.password,
+        role:registerdUser.role,
         token: generateToken(registerdUser._id)
     })
 })
@@ -59,7 +59,7 @@ const loginUser = AsyncHandler(async (req, res) => {
             id: checkUser._id,
             name: checkUser.name,
             email: checkUser.email,
-            password: checkUser.password,
+            role:checkUser.role,
             token: generateToken(checkUser._id),
         })
     } else {

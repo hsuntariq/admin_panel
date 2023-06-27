@@ -19,6 +19,14 @@ const userSchema = mongoose.Schema({
     role: {
         type: Number,
         default: 0
+    },
+    resetToken: {
+        default:null,
+        type:String,
+    },
+    resetTokenExpiration:{
+        default:null,
+        type:Date
     }
 });
 
